@@ -1,0 +1,20 @@
+const hex= [1,2,3,4,5,6,7,8,9,"A","B","C","D","E","F","G","H","I"]; 
+
+const randomNumberGenerator = (numberArray)=>{
+    return Math.trunc(Math.random()*numberArray.length); 
+}
+let hexNumber = '#';
+const btn = document.querySelector('.btn');
+btn.addEventListener('click',function(){
+    
+    for( i=0;i<6;i++)
+        
+        hexNumber+=hex[randomNumberGenerator(hex)];
+        document.body.style.backgroundColor=hexNumber; 
+        console.log(hexNumber); 
+    
+})
+
+
+Why for loop with curly braces give different answer than for loop with out curly braces? 
+Question has to be asked during course. 
